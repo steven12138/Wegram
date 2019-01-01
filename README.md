@@ -1,4 +1,4 @@
-# Wechat-to-Telegram-python
+# Chatgram
 # 同个hello world.py 在你的telegram上使用python
 使用方法
 把token改成你的token
