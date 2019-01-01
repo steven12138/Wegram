@@ -1,7 +1,8 @@
 # Chatgram
 # 通过hello world.py 在你的telegram上使用python
-使用方法
-#安装必要的库
+#使用方法
+
+##安装必要的库
 ```
 pip install itchat
 pip install pytelegramBotAPI
