@@ -1,6 +1,12 @@
 # Chatgram
-# 同个hello world.py 在你的telegram上使用python
+# 通过hello world.py 在你的telegram上使用python
 使用方法
+#安装必要的库
+```
+pip install itchat
+pip install pytelegramBotAPI
+pip install PIL
+```
 把token改成你的token
 根据官方说明文档，修改chatid 到机器人与你的chatid
 直接发送消息聊天，可以处理贴纸图片和表情
