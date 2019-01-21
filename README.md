@@ -11,7 +11,7 @@ pip install pillow
 把token改成你的token
 
 把chatid修改成你的chatid
-#chatid查看方法
+# chatid查看方法
 https://api.telegram.org/bot"token"/getUpdates
 
 替换"token"为你的token，然后发送一条消息再刷新网页。可以看到消息详情。当中有一项为chatid，复制即可。
