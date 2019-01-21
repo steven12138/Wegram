@@ -6,6 +6,7 @@
 ```
 pip install itchat
 pip install pytelegramBotAPI
+pip install pillow
 ```
 把token改成你的token
 根据官方说明文档，修改chatid 到机器人与你的chatid
