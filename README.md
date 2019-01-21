@@ -12,9 +12,9 @@ pip install pillow
 
 把chatid修改成你的chatid
 #chatid查看方法
-https://api.telegram.org/bot<token>/getUpdates
+https://api.telegram.org/bot"token"/getUpdates
 
-替换<token>为你的<token>，然后发送一条消息再刷新网页。可以看到消息详情。当中有一项为chatid，复制即可。
+替换"token"为你的token，然后发送一条消息再刷新网页。可以看到消息详情。当中有一项为chatid，复制即可。
 每个人和同一个机器人拥有唯一chatid，只需查看一次后一劳永逸
 
 
