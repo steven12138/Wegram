@@ -27,5 +27,5 @@ https://api.telegram.org/bot"token"/getUpdates
 使用这个命令来查看好友列表
 # /revoke
 使用这个命令来撤回最后一条消息
-#/login
+# /login
 使用这个命令来登陆，由于微信防止盗号机制，二维码只能使用摄像头扫描
