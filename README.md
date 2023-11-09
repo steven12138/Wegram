@@ -1,31 +1,69 @@
 # Wegram
-# Í¨¹ıhello world.py ÔÚÄãµÄtelegramÉÏÊ¹ÓÃwechat
-#Ê¹ÓÃ·½·¨
+!!! This project is now non-functional and needs to be repaired. !!!
 
-##°²×°±ØÒªµÄ¿â
+Current Exceptions:
+
+when search friendlist
+```python
+Traceback (most recent call last):
+  File "/root/Wegram/Main.py", line 197, in <module>
+    bot.polling()
+  File "/usr/local/lib/python3.10/dist-packages/telebot/__init__.py", line 1043, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "/usr/local/lib/python3.10/dist-packages/telebot/__init__.py", line 1118, in __threaded_polling
+    raise e
+  File "/usr/local/lib/python3.10/dist-packages/telebot/__init__.py", line 1074, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/usr/local/lib/python3.10/dist-packages/telebot/util.py", line 147, in raise_exceptions
+    raise self.exception_info
+  File "/usr/local/lib/python3.10/dist-packages/telebot/util.py", line 90, in run
+    task(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/telebot/__init__.py", line 6801, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "/root/Wegram/Main.py", line 122, in showlist
+    if len(i.RemarkName)==0:
+AttributeError: 'dict' object has no attribute 'RemarkName'
+```
+
+when login
+```python
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/itchat/components/login.py", line 239, in maintain_loop
+    msgList = produce_msg(self, msgList)
+  File "/usr/local/lib/python3.10/dist-packages/itchat/components/messages.py", line 56, in produce_msg
+    utils.msg_formatter(m, 'Content')
+  File "/usr/local/lib/python3.10/dist-packages/itchat/utils.py", line 69, in msg_formatter
+    d[k]  = htmlParser.unescape(d[k])
+AttributeError: 'HTMLParser' object has no attribute 'unescape'
+```
+
+# é€šè¿‡hello world.py åœ¨ä½ çš„telegramä¸Šä½¿ç”¨wechat
+#ä½¿ç”¨æ–¹æ³•
+
+##å®‰è£…å¿…è¦çš„åº“
 ```
 pip install itchat
 pip install pytelegramBotAPI
 pip install pillow
 ```
-°Ñtoken¸Ä³ÉÄãµÄtoken
+æŠŠtokenæ”¹æˆä½ çš„token
 
-°ÑchatidĞŞ¸Ä³ÉÄãµÄchatid
-# chatid²é¿´·½·¨
+æŠŠchatidä¿®æ”¹æˆä½ çš„chatid
+# chatidæŸ¥çœ‹æ–¹æ³•
 https://api.telegram.org/bot"token"/getUpdates
 
-Ìæ»»"token"ÎªÄãµÄtoken£¬È»ºó·¢ËÍÒ»ÌõÏûÏ¢ÔÙË¢ĞÂÍøÒ³¡£¿ÉÒÔ¿´µ½ÏûÏ¢ÏêÇé¡£µ±ÖĞÓĞÒ»ÏîÎªchatid£¬¸´ÖÆ¼´¿É¡£
-Ã¿¸öÈËºÍÍ¬Ò»¸ö»úÆ÷ÈËÓµÓĞÎ¨Ò»chatid£¬Ö»Ğè²é¿´Ò»´ÎºóÒ»ÀÍÓÀÒİ
+æ›¿æ¢"token"ä¸ºä½ çš„tokenï¼Œç„¶åå‘é€ä¸€æ¡æ¶ˆæ¯å†åˆ·æ–°ç½‘é¡µã€‚å¯ä»¥çœ‹åˆ°æ¶ˆæ¯è¯¦æƒ…ã€‚å½“ä¸­æœ‰ä¸€é¡¹ä¸ºchatidï¼Œå¤åˆ¶å³å¯ã€‚
+æ¯ä¸ªäººå’ŒåŒä¸€ä¸ªæœºå™¨äººæ‹¥æœ‰å”¯ä¸€chatidï¼Œåªéœ€æŸ¥çœ‹ä¸€æ¬¡åä¸€åŠ³æ°¸é€¸
 
 
-¸ù¾İ¹Ù·½ËµÃ÷ÎÄµµ£¬ĞŞ¸Ächatid µ½»úÆ÷ÈËÓëÄãµÄchatid
-Ö±½Ó·¢ËÍÏûÏ¢ÁÄÌì£¬¿ÉÒÔ´¦ÀíÌùÖ½Í¼Æ¬ºÍ±íÇé
+æ ¹æ®å®˜æ–¹è¯´æ˜æ–‡æ¡£ï¼Œä¿®æ”¹chatid åˆ°æœºå™¨äººä¸ä½ çš„chatid
+ç›´æ¥å‘é€æ¶ˆæ¯èŠå¤©ï¼Œå¯ä»¥å¤„ç†è´´çº¸å›¾ç‰‡å’Œè¡¨æƒ…
 # /chat [name]
-Ê¹ÓÃÕâ¸öÃüÁîÀ´Ñ¡ÔñÓëË­ÁÄÌì
-µ±ÓĞÈË¸øÄã·¢ÏûÏ¢Ê±£¬Äã¿ÉÒÔÖ±½ÓÔÚÏÂÃæ»Ø¸´
+ä½¿ç”¨è¿™ä¸ªå‘½ä»¤æ¥é€‰æ‹©ä¸è°èŠå¤©
+å½“æœ‰äººç»™ä½ å‘æ¶ˆæ¯æ—¶ï¼Œä½ å¯ä»¥ç›´æ¥åœ¨ä¸‹é¢å›å¤
 # /friendlist
-Ê¹ÓÃÕâ¸öÃüÁîÀ´²é¿´ºÃÓÑÁĞ±í
+ä½¿ç”¨è¿™ä¸ªå‘½ä»¤æ¥æŸ¥çœ‹å¥½å‹åˆ—è¡¨
 # /revoke
-Ê¹ÓÃÕâ¸öÃüÁîÀ´³·»Ø×îºóÒ»ÌõÏûÏ¢
+ä½¿ç”¨è¿™ä¸ªå‘½ä»¤æ¥æ’¤å›æœ€åä¸€æ¡æ¶ˆæ¯
 # /login
-Ê¹ÓÃÕâ¸öÃüÁîÀ´µÇÂ½£¬ÓÉÓÚÎ¢ĞÅ·ÀÖ¹µÁºÅ»úÖÆ£¬¶şÎ¬ÂëÖ»ÄÜÊ¹ÓÃÉãÏñÍ·É¨Ãè
+ä½¿ç”¨è¿™ä¸ªå‘½ä»¤æ¥ç™»é™†ï¼Œç”±äºå¾®ä¿¡é˜²æ­¢ç›—å·æœºåˆ¶ï¼ŒäºŒç»´ç åªèƒ½ä½¿ç”¨æ‘„åƒå¤´æ‰«æ
